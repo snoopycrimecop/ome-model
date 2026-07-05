@@ -88,7 +88,7 @@
     <logback.version>1.5.34</logback.version>
     <slf4j.version>2.0.9</slf4j.version>
     <ome_common.version>6.3.0</ome_common.version>
-    <ome-common.version>${ome_common.version}</ome-common.version>
+    <ome-common.version>6.3.1-SNAPSHOT</ome-common.version>
     <testng.version>7.9.0</testng.version>
 
     <ome.model.schemaver>2016-06</ome.model.schemaver>
