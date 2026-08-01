@@ -239,6 +239,16 @@ public interface MetadataStore extends BaseMetadata
   {
   }
 
+  /**
+   * Set whether the Pixels element contains a MetadataOnly marker.
+   *
+   * @param metadataOnly true to add the marker, false or null to remove it.
+   * @param imageIndex the Image index.
+   */
+  default void setPixelsMetadataOnly(Boolean metadataOnly, int imageIndex)
+  {
+  }
+
 {% for o in sorted(model.objects.values(), key=lambda x: x.name) %}\
 {% if o.name not in fu.METADATA_OBJECT_IGNORE %}\
 {% if o.langBaseType != 'Object' %}\
