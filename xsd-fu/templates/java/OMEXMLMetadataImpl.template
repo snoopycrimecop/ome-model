@@ -524,7 +524,12 @@ ${counter(k, o, v)}\
     return root.getCreator();
   }
 
-  /** Gets whether the Pixels element contains a MetadataOnly marker. */
+  /**
+   * Gets whether the Pixels element contains a MetadataOnly marker.
+   *
+   * @param imageIndex the Image index.
+   * @return true if the marker is present, otherwise false.
+   */
   public Boolean getPixelsMetadataOnly(int imageIndex)
   {
     return root.getImage(imageIndex).getPixels().getMetadataOnly() != null;
@@ -642,7 +647,14 @@ ${getter(k, o, prop, v)}\
     root.setCreator(creator);
   }
 
-  /** Sets whether the Pixels element contains a MetadataOnly marker. */
+  /**
+   * Sets whether the Pixels element contains a MetadataOnly marker.
+   * The caller must ensure that Pixels does not also contain BinData or
+   * TiffData elements when adding the marker.
+   *
+   * @param metadataOnly true to add the marker, false or null to remove it.
+   * @param imageIndex the Image index.
+   */
   public void setPixelsMetadataOnly(Boolean metadataOnly, int imageIndex)
   {
     OME o0 = root;

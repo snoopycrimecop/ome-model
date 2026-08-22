@@ -392,6 +392,8 @@ public interface MetadataRetrieve extends BaseMetadata {
 
   /**
    * Get whether the Pixels element contains a MetadataOnly marker.
+   * A MetadataOnly marker is mutually exclusive with BinData and TiffData
+   * elements under the same Pixels element.
    *
    * @param imageIndex the Image index.
    * @return true if the marker is present, false if it is absent, or null if
